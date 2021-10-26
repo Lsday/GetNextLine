@@ -6,11 +6,11 @@
 /*   By: oronda <oronda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 11:23:29 by oronda            #+#    #+#             */
-/*   Updated: 2021/10/25 13:47:37 by oronda           ###   ########.fr       */
+/*   Updated: 2021/10/26 09:35:11 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strdup(char *s)
 {

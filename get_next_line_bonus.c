@@ -6,11 +6,11 @@
 /*   By: oronda <oronda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 11:21:39 by oronda            #+#    #+#             */
-/*   Updated: 2021/10/25 13:55:16 by oronda           ###   ########.fr       */
+/*   Updated: 2021/10/26 09:37:10 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	has_newline(char *str)
 {

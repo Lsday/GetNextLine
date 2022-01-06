@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 11:21:39 by oronda            #+#    #+#             */
-/*   Updated: 2021/10/25 13:44:41 by oronda           ###   ########.fr       */
+/*   Updated: 2021/11/24 13:41:17 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	has_newline(char *str)
 	}
 	return (0);
 }
+
+
 
 char	*read_file(int fd, char *savedbuffer, char *buff)
 {
@@ -84,21 +86,16 @@ char	*get_next_line(int fd)
 	result = NULL;
 	if (fd < 0 || BUFFER_SIZE < 1 || read(fd, buff, 0) < 0)
 		return (NULL);
+
+	if (!savedbuffer)
+		savedbuffer = ft_strdup("");
+		
+	savedbuffer = read_file(fd, savedbuffer, buff);
+	
 	if (savedbuffer)
 	{
-		savedbuffer = read_file(fd, savedbuffer, buff);
 		result = cut_before_newline(savedbuffer);
 		savedbuffer = cut_after_newline(savedbuffer);
-	}
-	else
-	{
-		savedbuffer = ft_strdup("");
-		savedbuffer = read_file(fd, savedbuffer, buff);
-		if (savedbuffer)
-		{
-			result = cut_before_newline(savedbuffer);
-			savedbuffer = cut_after_newline(savedbuffer);
-		}
 	}
 	return (result);
 }

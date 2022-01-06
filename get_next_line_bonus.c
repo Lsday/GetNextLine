@@ -6,7 +6,7 @@
 /*   By: oronda <oronda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 11:21:39 by oronda            #+#    #+#             */
-/*   Updated: 2021/10/26 09:37:10 by oronda           ###   ########.fr       */
+/*   Updated: 2021/10/26 11:06:03 by oronda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	*cut_after_newline(char *buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	*savedbuffer[1024];
+	static char	*savedbuffer[FOPEN_MAX];
 	char		buff[BUFFER_SIZE + 1];
 	char		*result;
 
